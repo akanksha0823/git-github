@@ -1,0 +1,66 @@
+git config --global  user.name "akanksha"
+git config --global user.email "akanksha.banga.ab@gmail.com"
+git config --global --list
+git status
+
+//create local repo (below command by default give master)
+git init 
+
+git init -b main
+
+//add file to staging area
+git add filename
+
+//commit history
+git log
+
+//commit 
+git commit -m "message"
+
+//everytime you make a change you have to first add file to staging and then commit.
+
+//skip staging
+git commit -a -m "message"
+
+//show me the changes(when i am not in staging area)
+git diff
+
+////show me the changes(when i am  in staging area)
+git diff --staged
+
+// add all untracked file to staging
+git add .
+
+//remove after commit
+git rm --cached filename
+
+
+git branch -M main
+git remote add origin main git@github.com:akanksha0823/git-github.git
+git push -u main
+
+git push origin main
+
+
+git remote -v
+
+
+git tag -a v1.0 -m "first release"
+git tag
+git push origin v1.0
+
+
+
+//git  branch
+git checkout -b feature1 //create
+git switch -c feature2 //create
+git branch //show all branches in local
+git branch --all   //show all branch in local & remote
+git switch main
+git branch -d feature2 // delete branch
+
+
+//git merge(done from main branch on local)
+git pull origin main //before merge always pull latest main
+git push origin main 
+git merge branchName 
